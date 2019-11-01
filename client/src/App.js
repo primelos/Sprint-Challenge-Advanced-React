@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
 import PlayerList from './components/PlayersList'
-
+import "./styles.scss";
 
 
 class App extends Component {
@@ -27,19 +27,16 @@ class App extends Component {
 
 
   render(){
-    if(!this.state.input.length){
-      return(
-        <h2>Loading the data..</h2>
-      )
-    }
+    // if(!this.state.input.length){
+    //   return(
+    //     <h2>Loading the data..</h2>
+    //   )
+    // }
   return (
     <div className="App">
-      <header className="App-header">
-      
+    
       <PlayerList newData={this.state.input}/>
-      
-
-      </header>
+   
     </div>
   );
   }
